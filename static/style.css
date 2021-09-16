@@ -1,0 +1,14 @@
+body {
+    background-color: hotpink;
+    color: whitesmoke;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    color: black;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <title>Mario's Pizza Shop</title>
+</head>
+<body>
+    <img src="/static/mario.png" width=100 height=100>
+    <h1>Mario's Pizza Shop</h1>
+    <h2>Please select your name from the list below:</h2>
+    {% for order in orders %}
+    <div>
+        <p>
+            <a href="/order/{{ orders.index(order) }}">{{ order.customer_name }}</a>
+        </p>
+    </div>
+    {% endfor %}
+</body>
+</html>
+
